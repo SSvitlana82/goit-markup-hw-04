@@ -80,10 +80,30 @@ img {display: block;
     letter-spacing: 0.02em; 
     display: block;
     padding: 24px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link:hover {color: #404BBF;}
 .header-menu-link:focus {color: #404BBF;}
+
+.current {
+    color: var(--OCEAN, #404bbf);
+    position: relative;
+}
+
+.current::after {
+    background-color: #404bbf;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+}
 
 .header-address {
     margin-left: auto; 
@@ -104,6 +124,9 @@ img {display: block;
     text-decoration: none;
     display: block;
     padding: 24px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-link:hover {color: #404BBF;}
@@ -123,6 +146,7 @@ img {display: block;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    max-width: 1440px;
 }
 
 .hero-title {
@@ -134,7 +158,6 @@ img {display: block;
     max-width: 496px; 
     margin: 0 auto; 
     margin-bottom: 48px;
-    background-image: none;
 }
 
 .hero-btn {
@@ -151,7 +174,8 @@ img {display: block;
     height: 56px; 
     border-radius: 4px; 
     padding: 16px 32px; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover {
